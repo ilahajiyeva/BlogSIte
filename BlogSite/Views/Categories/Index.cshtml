@@ -1,0 +1,14 @@
+﻿@model Category
+@{
+    ViewData["Title"] = Model.CategoryName;
+}
+
+<h1>@Model.CategoryName</h1>
+
+<div class="row">
+    @foreach (var item in Model.Posts)
+    {
+        <partial name="_BlogView" model="item"></partial>
+    }
+</div>
+

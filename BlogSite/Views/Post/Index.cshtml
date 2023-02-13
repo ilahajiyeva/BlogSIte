@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Post>
+@{
+    ViewData["Title"] = "Post List";
+}
+
+<h1>Post List</h1>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+       <partial name="_BlogView" model="item"></partial>
+    }
+</div>
+
